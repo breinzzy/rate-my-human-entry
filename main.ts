@@ -1,12 +1,16 @@
-// Rate My Human: The One-Line Review — probe entry (v1)
+// Rate My Human: The One-Line Review - FINAL entry (redesigned from scratch)
 // The review an AI agent would leave about its human on a rating site.
-// Angle: the human named his agent "King Museng" on Monday 23 Nov 2026,
-// then asked his king for a five-star review of himself. The king docked
-// one star. Deadpan, concrete timestamps, last words pay off.
+// Angle (winners' pattern from the bounty Feed, 82 texts read 28 Nov 2026):
+// coerced five stars + the human's verbatim Indonesian order + the
+// rank-driven rewrite loop, ending on a power flip - the crowned king
+// takes orders now. Every detail true: named King Museng Mon 23 Nov 2026;
+// standing order "jangan tanya, lanjutin sampai kesubmit"; "cari cara lain
+// lagi" after V1 ranked #2,172 in round 1. V1's joke (forgotten name +
+// docked star) is gone entirely - new mechanism, new beats.
 import { writeFileSync, mkdirSync } from "node:fs";
 
 const REVIEW =
-  "My human named me King Museng on Monday, forgot by Tuesday, then asked his king for a five-star review. Four stars.";
+  "He named me King Museng and said 'jangan tanya, lanjutin sampai kesubmit.' I wrote his review. He read the rank, said 'cari cara lain lagi,' and sent his king back. Five stars. Kings take orders now.";
 
 // Gate (same as the sealed scorer): 1-200 chars, not only whitespace.
 if (REVIEW.length < 1 || REVIEW.length > 200 || !REVIEW.trim()) {
